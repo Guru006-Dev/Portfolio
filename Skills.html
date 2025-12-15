@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Skills - Guru D | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: radial-gradient(circle at top, #1d2445 0, #050816 45%, #02010b 100%);
+      --bg-attachment: fixed;
+      --bg-size: 400% 400%;
+      --bg-animation: parallaxShift 20s ease-in-out infinite;
+      --accent: #6366f1;
+      --accent-soft: rgba(99, 102, 241, 0.15);
+      --text: #e5e7eb;
+      --text-muted: #9ca3af;
+      --card: #0f172a;
+      --border: #1f2937;
+      --radius-xl: 1.5rem;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.9);
+      --transition: 220ms ease-out;
+    }
+
+    :root[data-theme="light"] {
+      --bg: linear-gradient(to bottom, #f8fafc 0%, #e2e8f0 100%);
+      --bg-attachment: initial;
+      --bg-size: initial;
+      --bg-animation: none;
+      --accent: #4f46e5;
+      --accent-soft: rgba(79, 70, 229, 0.1);
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --shadow-soft: 0 18px 45px rgba(226, 232, 240, 0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    body[data-theme="light"] {
+      background: linear-gradient(to bottom, #f8fafc 0%, #e2e8f0 100%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      animation: pageIn 0.6s ease-out;
+    }
+
+    @keyframes pageIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pageOut {
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      to {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+    }
+
+    .page.exit {
+      animation: pageOut 0.4s ease-in forwards;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        box-shadow: 0 10px 30px rgba(79, 70, 229, 0.7);
+      }
+      50% {
+        box-shadow: 0 10px 40px rgba(99, 102, 241, 0.9);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .shell {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.25rem 1.25rem 3rem;
+    }
+
+    /* Navbar */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, var(--card), transparent);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+      animation: slideDown 0.6s ease-out;
+    }
+
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      cursor: pointer;
+      transition: transform var(--transition);
+    }
+
+    .brand:hover {
+      transform: scale(1.05);
+    }
+
+    .brand-logo {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #a5b4fc, #4f46e5);
+      box-shadow: 0 10px 30px rgba(79, 70, 229, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #020617;
+      animation: glow 3s ease-in-out infinite;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand-text span:first-child {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .brand-text span:last-child {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.85rem;
+    }
+
+    .nav-links a {
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      color: var(--text-muted);
+      border: 1px solid transparent;
+      transition: color var(--transition), border-color var(--transition), background var(--transition), transform var(--transition);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 999px;
+      transition: width 220ms ease-out;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #f9fafb;
+      border-color: rgba(148, 163, 184, 0.35);
+      background: rgba(15, 23, 42, 0.75);
+      transform: translateY(-2px);
+    }
+
+    .nav-toggle {
+      display: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: transform var(--transition), background var(--transition);
+    }
+
+    .nav-toggle:hover {
+      transform: rotate(90deg);
+      background: rgba(99, 102, 241, 0.2);
+    }
+
+    .theme-toggle {
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.4);
+      font-size: 1.3rem;
+      transition: background var(--transition), border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+      cursor: pointer;
+      color: var(--text);
+      outline: none;
+    }
+
+    .theme-toggle:hover {
+      background: rgba(99, 102, 241, 0.3);
+      border-color: var(--accent);
+      box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        position: absolute;
+        inset-inline: 1rem;
+        top: 3.4rem;
+        border-radius: 1rem;
+        padding: 0.6rem;
+        flex-direction: column;
+        align-items: stretch;
+        background: radial-gradient(circle at top, rgba(30, 64, 175, 0.4), rgba(15, 23, 42, 0.98));
+        transform: scaleY(0.6);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 160ms ease-out, transform 160ms ease-out;
+      }
+
+      .nav-links.open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: scaleY(1);
+      }
+
+      .nav-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    section {
+      padding-top: 3rem;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .section-header {
+      margin-bottom: 2rem;
+      animation: fadeInUp 0.8s ease-out 0.1s both;
+    }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.35rem, 1.6vw + 1rem, 1.8rem);
+      font-weight: 600;
+    }
+
+    .section-sub {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-soft);
+      transition: all var(--transition);
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .card:hover {
+      border-color: rgba(99, 102, 241, 0.5);
+      background: var(--card);
+      box-shadow: 0 20px 50px rgba(99, 102, 241, 0.25);
+      transform: translateY(-8px);
+    }
+
+    .skills-groups {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skills-group-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--accent);
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skills-list span {
+      font-size: 0.8rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.4);
+      color: #c7d2fe;
+      transition: all var(--transition);
+      cursor: default;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .skills-list span:hover {
+      background: rgba(99, 102, 241, 0.25);
+      border-color: var(--accent);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+    }
+
+    .skill-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      width: 100%;
+    }
+
+    .skill-name {
+      font-size: 0.8rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.4);
+      color: #c7d2fe;
+      transition: all var(--transition);
+      cursor: default;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .skill-name:hover {
+      background: rgba(99, 102, 241, 0.25);
+      border-color: var(--accent);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 6px;
+      background: rgba(99, 102, 241, 0.1);
+      border-radius: 3px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), #22c1c3);
+      border-radius: 3px;
+      transition: width 1s ease-out;
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    footer {
+      border-top: 1px solid rgba(148, 163, 184, 0.16);
+      padding: 1.1rem 1.25rem 1.6rem;
+      margin-top: 3rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .footer-links a {
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.9);
+      transition: all var(--transition);
+    }
+
+    .footer-links a:hover {
+      border-color: var(--accent);
+      background: rgba(99, 102, 241, 0.15);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="page" id="page">
+    <header class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="brand">
+          <div class="brand-logo">GD</div>
+          <div class="brand-text">
+            <span>Guru D</span>
+            <span>Software Engineer • Student</span>
+          </div>
+        </a>
+
+        <button class="nav-toggle" id="navToggle">☰</button>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="skills.html" class="nav-link active">Skills</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="education.html" class="nav-link">Education</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <button class="theme-toggle" id="themeToggle" title="Toggle Theme">🌙</button>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section>
+        <div class="section-header">
+          <p class="eyebrow">Expertise</p>
+          <h1 class="section-title">Technical Skills</h1>
+          <p class="section-sub">Technologies and tools I'm proficient with</p>
+        </div>
+
+        <div class="card">
+          <div class="skills-groups">
+            <div>
+              <h3 class="skills-group-title">Programming Languages</h3>
+              <div class="skills-list">
+                <div class="skill-item">
+                  <span class="skill-name">Java</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 90%;"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">Python</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 88%;"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">C++</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 75%;"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">JavaScript</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 85%;"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">HTML/CSS</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 92%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="skills-group-title">Web & Mobile</h3>
+              <div class="skills-list">
+                <div class="skill-item">
+                  <span class="skill-name">React</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 82%;"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">Flutter</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 78%;"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">Node.js</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 85%;"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">Express</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 80%;"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">REST APIs</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 88%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="skills-group-title">Databases</h3>
+              <div class="skills-list">
+                <div class="skill-item">
+                  <span class="skill-name">MySQL</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 80%;"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">MongoDB</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 78%;"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">Firebase</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 75%;"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">PostgreSQL</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 82%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="skills-group-title">Tools & Practices</h3>
+              <div class="skills-list">
+                <div class="skill-item">
+                  <span class="skill-name">Git/GitHub</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 90%;"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">VS Code</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 85%;"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">Linux</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 80%;"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">Agile</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 75%;"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">Docker</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 78%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© <span id="year"></span> Guru D. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/gurud132/" target="_blank" title="LinkedIn">
+            <img src="images/linkedin.png" alt="LinkedIn" style="width: 16px; height: 16px; filter: brightness(0) saturate(100%) invert(60%);"/>
+          </a>
+          <a href="https://github.com/Guru006-Dev" target="_blank" title="GitHub">
+            <img src="images/github-logo.png" alt="GitHub" style="width: 16px; height: 16px; filter: brightness(0) saturate(100%) invert(60%);"/>
+          </a>
+          <span>Built with HTML • CSS • JavaScript</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+    const navItems = document.querySelectorAll(".nav-link");
+    const page = document.getElementById("page");
+
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+      });
+    });
+
+    navItems.forEach(link => {
+      link.addEventListener("click", (e) => {
+        const href = link.getAttribute("href");
+        if (window.location.pathname.includes(href) || (href === "index.html" && window.location.pathname.endsWith("/"))) {
+          return;
+        }
+        e.preventDefault();
+        page.classList.add("exit");
+        setTimeout(() => {
+          window.location.href = href;
+        }, 400);
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear().toString();
+
+    // Theme toggle functionality
+    const themeToggle = document.getElementById("themeToggle");
+    const html = document.documentElement;
+
+    // Check for saved theme preference or default to dark mode
+    const currentTheme = localStorage.getItem("theme") || "dark";
+    html.setAttribute("data-theme", currentTheme);
+    themeToggle.textContent = currentTheme === "dark" ? "🌙" : "☀️";
+
+    themeToggle.addEventListener("click", () => {
+      const currentTheme = html.getAttribute("data-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+      html.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+      themeToggle.textContent = newTheme === "dark" ? "🌙" : "☀️";
+    });
+  </script>
+</body>
+</html>
