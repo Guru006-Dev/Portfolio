@@ -1,296 +1,256 @@
 // ============================================================
-// portfolioData.js — Centralized configuration for Md Yusuf's Portfolio
+// portfolioData.js — Centralized configuration for Guru D's Portfolio
 // All external links, personal info, and content in one place.
-// Update this file to change any content across the entire site.
 // ============================================================
 
 export const personalInfo = {
-  name: "Md Yusuf",
-  firstName: "Md Yusuf",
-  brandName: "Md Yusuf",
-  title: "Full Stack & Java Developer",
-  location: "Bhopal, India",
-  phone: "+91 99396-08743",
+  name: "Guru D",
+  firstName: "Guru",
+  brandName: "Guru D",
+  title: "Full-Stack & Distributed Systems Engineer",
+  location: "Vellore, Tamil Nadu, India",
+  phone: "+91 80727-79893",
   emails: {
-    primary: "mdyusufcse096@iesuniversity.ac.in",
-    secondary: "yusuf.rgpv@gmail.com",
+    primary: "dguru5079@gmail.com",
   },
   summary:
-    "Aspiring software engineer and motivated B.Tech Computer Science student with solid skills in Java, Spring Boot, React, and Python. Passionate about building scalable full-stack applications with clean architecture and modern tech stacks.",
-  resumeUrl: "/Md_Yusuf_Resume_2026.pdf",
+    "Full-Stack & Distributed Systems Engineer specializing in high-throughput real-time systems, zero-knowledge security architectures, and applied NLP. Experienced in architecting scalable platforms with Redis, Node.js, React, Supabase, and C11.",
+  resumeUrl: "/Guru_Resume.pdf",
 };
 
 export const socialLinks = {
-  github: "https://github.com/mdyusuf0",
-  linkedin: "https://linkedin.com/in/mdyusuf0",
-  instagram: "https://instagram.com/heyyusuffff",
+  github: "https://github.com/Guru006-Dev",
+  linkedin: "https://www.linkedin.com/in/gurud132",
+  instagram: "https://www.instagram.com/o_lone.wolf_o/",
 };
 
 export const heroContent = {
-  greeting: "Hi, I'm Md Yusuf",
-  titleHighlight: "Full Stack & Java Developer",
+  greeting: "Hi, I'm Guru D",
+  titleHighlight: "Full-Stack & Distributed Systems Engineer",
   subtitle:
-    "I build fast, scalable applications using Java, Spring Boot, MERN Stack, and Python.",
+    "I build high-throughput distributed systems, zero-knowledge security architectures, and AI-driven full-stack applications.",
   ctaPrimary: { text: "View My Work", href: "#projects" },
   ctaSecondary: {
     text: "Contact Me",
-    href: "mailto:mdyusufcse096@iesuniversity.ac.in?subject=Hiring Inquiry – Portfolio&body=Hello Md Yusuf,%0D%0A%0D%0AI came across your portfolio and would like to discuss an opportunity with you.%0D%0A%0D%0ALooking forward to hearing from you.%0D%0ABest Regards,",
+    href: "mailto:dguru5079@gmail.com?subject=Hiring Inquiry – Portfolio&body=Hello Guru,%0D%0A%0D%0AI came across your portfolio and would like to discuss an opportunity with you.%0D%0A%0D%0ALooking forward to hearing from you.%0D%0ABest Regards,",
   },
-  ctaResume: { text: "Download Resume", href: "/Md_Yusuf_Resume_2026.pdf" },
+  ctaResume: { text: "Download Resume", href: "/Guru_Resume.pdf" },
 };
 
 export const aboutContent = {
   heading: "Hello!",
-  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Md Yusuf</span>, an aspiring software engineer based in Bhopal, India, dedicated to crafting clean, functional, and highly scalable full-stack applications.`,
-  techStack: ["Java", "Spring Boot", "MERN Stack"],
+  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Guru D</span>, a Full-Stack & Distributed Systems Engineer based in Vellore, TN. I specialize in building zero-knowledge architectures, real-time distributed platforms, and AI-powered applications with robust security and clean code.`,
+  techStack: ["TypeScript", "Node.js", "React.js", "Redis", "Supabase", "Python"],
 };
 
 export const skillsContent = {
-  badge: "My Process",
-  heading: "Here's how I turn ideas into real-world applications",
+  badge: "My Engineering Approach",
+  heading: "How I architect and scale distributed systems",
   description:
-    "I follow a structured, creative, and highly technical approach to turn ideas into robust full-stack applications.",
+    "From low-level data structures to fault-tolerant distributed consensus, I build secure, performant software built to scale.",
   cards: [
     {
       number: "01",
-      title: "Research",
-      text: "I start by understanding goals, user requirements, and technical constraints to lay a rock-solid foundation for the project.",
+      title: "System Architecture",
+      text: "Designing high-concurrency backend services, real-time event buses, and zero-knowledge data encryption models.",
     },
     {
       number: "02",
-      title: "Design",
-      text: "Crafting clean architecture, intuitive interfaces, and pixel-perfect wireframes that guarantee an engaging and accessible user experience.",
+      title: "Distributed Consensus",
+      text: "Implementing real-time leader election algorithms (Bully Algorithm) and atomic state locks with sub-10s failovers.",
     },
     {
       number: "03",
-      title: "Develop",
-      text: "Building scalable backends and responsive frontends using modern tech stacks and best practices.",
+      title: "Full-Stack Development",
+      text: "Crafting reactive web and mobile interfaces backed by Node.js, Express, PostgreSQL, Redis, and Supabase.",
     },
     {
       number: "04",
-      title: "Deploy",
-      text: "Rigorous testing, performance optimization, and seamless deployment to cloud infrastructure, followed by ongoing support.",
+      title: "Verification & Testing",
+      text: "Validating systems using Jest integration tests, Playwright E2E automation, k6 load testing, and C unit testing.",
     },
   ],
-  endText: "Ready to ship!",
+  endText: "Engineered to scale!",
 };
 
-// Brand New Technical Skills Data
 export const technicalSkills = {
   categories: [
     {
       title: "Programming Languages",
       skills: [
-        { name: "Java", level: 90 },
-        { name: "C++", level: 85 },
-        { name: "Python", level: 75 }
+        { name: "TypeScript", level: 92 },
+        { name: "Java", level: 88 },
+        { name: "Python", level: 85 },
+        { name: "C / C++", level: 84 },
+        { name: "Dart (Flutter)", level: 80 }
       ]
     },
     {
-      title: "Full Stack",
+      title: "Backend & Systems",
       skills: [
-        { name: "MERN Stack", level: 90 },
-        { name: "HTML", level: 95 },
-        { name: "CSS", level: 90 },
-        { name: "JavaScript", level: 92 }
+        { name: "Node.js / Express", level: 92 },
+        { name: "Redis & Geospatial", level: 90 },
+        { name: "Socket.io", level: 88 },
+        { name: "REST APIs", level: 95 },
+        { name: "Zero-Knowledge Arch", level: 86 }
       ]
     },
     {
-      title: "Backend",
+      title: "Frontend & Mobile",
       skills: [
-        { name: "Spring Boot", level: 88 },
-        { name: "FastAPI", level: 75 },
-        { name: "REST APIs", level: 90 }
+        { name: "React 19", level: 92 },
+        { name: "TypeScript", level: 90 },
+        { name: "Vite", level: 94 },
+        { name: "Tailwind CSS", level: 92 },
+        { name: "Flutter", level: 82 }
       ]
     },
     {
-      title: "Databases",
+      title: "Databases & Cloud",
       skills: [
-        { name: "MongoDB", level: 88 },
-        { name: "MySQL", level: 85 },
-        { name: "Firebase", level: 80 }
+        { name: "MongoDB", level: 90 },
+        { name: "PostgreSQL", level: 88 },
+        { name: "Supabase", level: 90 },
+        { name: "SQLite", level: 85 },
+        { name: "Firebase", level: 84 }
       ]
     },
     {
-      title: "Tools & Automation",
+      title: "Security & Applied AI",
       skills: [
-        { name: "Git & GitHub", level: 90 },
-        { name: "VS Code", level: 95 },
-        { name: "Postman", level: 88 },
-        { name: "n8n", level: 82 },
-        { name: "MongoDB Compass", level: 85 },
-        { name: "Antigravity", level: 80 },
-        { name: "Codex", level: 75 }
+        { name: "AES-256 Encryption", level: 92 },
+        { name: "Sentence-BERT / NLP", level: 85 },
+        { name: "Siamese Networks", level: 82 },
+        { name: "JWT Auth", level: 90 },
+        { name: "Google Gemini API", level: 88 }
       ]
     },
     {
-      title: "Computer Science Concepts",
+      title: "Testing & Infrastructure",
       skills: [
-        { name: "Data Structures", level: 88 },
-        { name: "Algorithms", level: 85 },
-        { name: "DBMS", level: 86 },
-        { name: "OOP", level: 90 },
-        { name: "Software Engineering", level: 84 }
+        { name: "Git & GitHub", level: 94 },
+        { name: "Docker", level: 85 },
+        { name: "k6 Load Testing", level: 84 },
+        { name: "Playwright E2E", level: 86 },
+        { name: "Jest / Vitest", level: 88 }
       ]
     }
   ]
 };
 
-// Brand New Content Creation Data
 export const contentCreation = {
-  badge: "Cinematic Content",
-  heading: "Creative Direction & Cinematic Edits",
-  description: "Beyond coding, I craft visual stories with premium editing, color grading, and creative pacing.",
+  badge: "Engineering Focus",
+  heading: "Technical Mastery & System Excellence",
+  description: "Focusing on security, distributed synchronization, and clean full-stack engineering.",
   categories: [
     {
-      title: "Cinematic Reels",
-      description: "Visual stories crafted with cinematic lighting, premium color grading, and high-impact sound design.",
-      stats: "50+ Reels Created",
-      icon: "🎥"
+      title: "Distributed Systems",
+      description: "Real-time state synchronization, atomic Redis lock scripts, and leader election failovers.",
+      stats: "Sub-10s Failover",
+      icon: "⚡"
     },
     {
-      title: "Travel Videos",
-      description: "Immersive travel vlogs and aesthetic edits capturing cultures, landscapes, and visual rhythms.",
-      stats: "15+ Countries/Cities",
-      icon: "✈️"
+      title: "Zero-Knowledge Security",
+      description: "Pre-transmission AES-256 client-side encryption and tamper-evident C11 audit logging.",
+      stats: "Client-Side Cryptography",
+      icon: "🔐"
     },
     {
-      title: "Educational Reels",
-      description: "Fast-paced tech tutorials and educational content designed to simplify coding and software engineering.",
-      stats: "100k+ Views",
+      title: "Applied AI & NLP",
+      description: "Semantic similarity matching using Sentence-BERT and Siamese Networks for symptom-case analysis.",
+      stats: "NLP Neural Networks",
       icon: "🧠"
     },
     {
-      title: "My Own Creative Edits",
-      description: "Experimental transitions, 3D overlays, and trendsetting visual effects that push creative bounds.",
-      stats: "Personal Projects",
-      icon: "⚡"
+      title: "Testing & Reliability",
+      description: "Rigorous E2E testing with Playwright, performance load benchmarking with k6, and C memory protection.",
+      stats: "End-to-End Coverage",
+      icon: "🛠️"
     }
   ]
 };
 
-// Brand New Leadership Data
 export const leadershipList = [
   {
-    title: "IEEE Madhya Pradesh Section (Social Media Team)",
-    description: "Managed and coordinated digital content, driving audience engagement and designing interactive visual campaigns for tech events.",
-    role: "Social Media Coordinator",
-    badge: "Volunteer"
+    title: "Amrita Vishwa Vidyapeetham — CSE Department",
+    description: "Collaborated on distributed systems research, lead peer workshops in cryptography and full-stack web architectures.",
+    role: "Engineering Peer Lead",
+    badge: "Academic"
   },
   {
-    title: "Team Coordinator – Go-Kart International Racing 2K25",
-    description: "Led multi-disciplinary teams in project management, budget control, and logistics coordination for a high-profile international racing event.",
-    role: "Team Coordinator",
-    badge: "Leadership"
-  },
-  {
-    title: "5-Day MOE IDE Bootcamp, Roorkee",
-    description: "Participated in an intensive Innovation, Design, and Entrepreneurship Bootcamp organized by the Ministry of Education at IIT Roorkee.",
-    role: "Bootcamp Graduate",
-    badge: "Innovation"
-  },
-  {
-    title: "Hosted INFORIA Tech Summit Hackathon",
-    description: "Organized and hosted the flagship hackathon, managing registrations, mentoring participant teams, and coordinating judge evaluations.",
-    role: "Hackathon Organizer",
-    badge: "Co-Curricular"
-  },
-  {
-    title: "Event Coordinator & Anchoring – INFORIA 2K25",
-    description: "Coordinated technical events and served as the main stage anchor, speaking in front of large crowds and managing the summit flow.",
-    role: "Stage Anchor & Coordinator",
-    badge: "Public Speaking"
+    title: "Zero-Vault Cryptographic Engine Developer",
+    description: "Authored native C11 risk verification modules with immutable hash-chain structures for secure audit records.",
+    role: "Lead Systems Architect",
+    badge: "Open Source"
   }
 ];
 
-// Brand New Internships Data
 export const internshipsList = [
   {
-    organization: "Netlink, Bhopal",
-    role: "Data Analytics & BI Tools Intern",
-    duration: "June 2025 - August 2025",
-    skills: ["Data Analytics", "Business Intelligence", "Dashboard Design", "Data Modeling"],
-    tech: ["Lumenore", "MySQL", "Excel", "BI Tools"]
-  },
-  {
-    organization: "Canva",
-    role: "Visual Content Creator & Designer",
-    duration: "May 2024 - June 2024",
-    skills: ["Visual Designing", "Poster Design", "Team Branding", "Asset Creation"],
-    tech: ["Canva Pro", "Figma", "Canva Design Suite"]
-  },
-  {
-    organization: "CollegeTips.in",
-    role: "Web Development Intern",
-    duration: "1 Month (Offline)",
-    skills: ["Frontend Development", "Responsive Layouts", "API Testing", "Web Performance"],
-    tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"]
+    organization: "Distributed Systems & Full Stack Projects",
+    role: "Full-Stack & Systems Developer",
+    duration: "2023 - Present",
+    skills: ["Distributed Systems", "Zero-Knowledge Cryptography", "Real-Time Engines", "Full-Stack Web"],
+    tech: ["Node.js", "React", "Redis", "Supabase", "TypeScript", "C11"]
   }
 ];
 
-// Brand New Soft Skills Data
 export const softSkillsList = [
-  { name: "Leadership", icon: "👑", desc: "Guiding teams, managing tasks, and driving project completion with shared vision." },
-  { name: "Public Speaking", icon: "🎤", desc: "Confident stage presence, anchoring summits, and delivering articulate technical ideas." },
-  { name: "Team Collaboration", icon: "🤝", desc: "Collaborating across fields, building racing carts, and engineering code in sync." },
-  { name: "Communication", icon: "💬", desc: "Clear, concise, and structured interactions in both business and technical contexts." },
-  { name: "Problem Solving", icon: "🧩", desc: "Breaking down complex engineering tasks into clean, logical, and modular pieces." },
-  { name: "Adaptability", icon: "🌟", desc: "Quick to pick up new frameworks like FastAPI, Spring Boot, or automation tools like n8n." },
-  { name: "Creativity", icon: "🎨", desc: "Blending cinematic aesthetics with software structure to build premium experiences." },
-  { name: "Time Management", icon: "⏰", desc: "Balancing B.Tech studies, event hosting, and developing robust software platforms." }
+  { name: "System Design", icon: "🏗️", desc: "Architecting modular, highly available, and fault-tolerant software systems." },
+  { name: "Problem Solving", icon: "🧩", desc: "Debugging concurrency race conditions, memory leaks, and distributed edge cases." },
+  { name: "Cryptographic Mindset", icon: "🔒", desc: "Prioritizing privacy and data security through zero-knowledge design patterns." },
+  { name: "Team Collaboration", icon: "🤝", desc: "Communicating complex technical concepts clearly with peers and stakeholders." },
+  { name: "Continuous Learning", icon: "🚀", desc: "Mastering emerging AI techniques, NLP models, and low-level system optimizations." }
 ];
 
 export const projects = [
   {
-    id: "foodmesh",
+    id: "zoomcab",
     number: "01",
-    badge: "🚀 Flagship Project",
-    title: "FoodMesh",
+    badge: "🚀 Real-Time Distributed Engine",
+    title: "Zoomcab — Distributed Ride-Hailing Platform",
     description:
-      "FoodMesh — An enterprise-grade multi-tenant restaurant management and food ordering SaaS platform inspired by UrbanPiper. It enables restaurants to manage multiple outlets, menus, inventory, customers, staff, and orders through a scalable architecture with secure authentication, role-based access control, and real-time operations. Built with React, Next.js, NestJS, PostgreSQL, Redis, Kafka, Elasticsearch, Docker, Kubernetes, and AWS.",
+      "A high-concurrency real-time ride-matching platform built on Node.js, React, Redis Geospatial, and Socket.io. Features an O(log N) geospatial driver matching engine eliminating external API dependencies, atomic Lua scripts for check-and-set driver assignment without race conditions, and a Bully Algorithm implementation for leader election with sub-10s failover detection for surge pricing coordination. Integrated with Google Gemini API for an AI concierge.",
     techTags: [
+      "Node.js",
       "React",
-      "Next.js",
-      "NestJS",
-      "PostgreSQL",
-      "Redis",
-      "Kafka",
-      "Elasticsearch",
-      "Docker",
-      "Kubernetes",
-      "AWS",
+      "Redis Geospatial",
+      "Socket.io",
+      "Google Gemini API",
+      "Lua",
+      "Bully Algorithm"
     ],
     links: {
-      github: "https://github.com/ersamirsingh/UrbanPiper",
+      github: "https://github.com/Guru006-Dev",
       demo: null,
     },
     isFlagship: true,
   },
   {
-    id: "karigar",
+    id: "zero-vault",
     number: "02",
-    badge: null,
-    title: "Karigar",
+    badge: "🔐 Zero-Knowledge Security",
+    title: "Zero-Vault — Zero-Knowledge Password Manager",
     description:
-      "A platform connecting local skilled workers with customers, featuring real-time search, worker profiles, and booking management with full database integration.",
-    techTags: ["React", "Node.js", "MongoDB", "Express", "REST API"],
+      "A security-focused password management platform engineered with zero-knowledge architecture where master passwords never leave the client and pre-transmission AES-256 encryption protects user data. Powered by a native C11 risk engine with immutable hash-chain verification for tamper-evident audit logging and a 5-layer conflict resolution model (LWW merge, versioned sync, encrypted tombstones) ensuring eventual consistency across devices.",
+    techTags: ["React 19", "TypeScript", "Node.js", "Supabase", "Native C11", "AES-256", "Playwright", "k6"],
     links: {
-      github: "https://github.com/mdyusuf0/Karigar",
-      frontendDemo: "https://karigar-frontend.onrender.com",
-      backendApi: "https://karigar-zny2.onrender.com",
+      github: "https://github.com/Guru006-Dev",
+      frontendDemo: null,
+      backendApi: null,
     },
     isFlagship: false,
   },
   {
-    id: "sentiment-analysis",
+    id: "healnet",
     number: "03",
-    badge: null,
-    title: "AI-Powered Sentiment Analysis",
+    badge: "🧠 Applied NLP Neural Network",
+    title: "HealNet — AI-Integrated Social Health Platform",
     description:
-      "A full-stack web application that analyzes citizen feedback using Artificial Intelligence to classify sentiments as positive, negative, or neutral. Features a responsive React frontend, a Node.js backend, MongoDB for data storage, and n8n automation for workflow orchestration — enabling real-time insights and efficient feedback management.",
-    techTags: ["React", "Node.js", "MongoDB", "n8n", "AI/ML", "REST API"],
+      "A full-stack social healthcare platform utilizing Sentence-BERT in a Siamese Neural Network to match patient symptoms against a comprehensive medical case library via cosine similarity. Includes an administrative moderation pipeline with structured content reviews, MongoDB audit logs, and an interactive Treatment & Hospital Comparison module analyzing recovery metrics and success rates.",
+    techTags: ["MERN Stack", "Sentence-BERT", "Siamese Network", "MongoDB", "Express", "React", "NLP"],
     links: {
-      github: "#", // Update when available
+      github: "https://github.com/Guru006-Dev",
     },
     isFlagship: false,
   },
@@ -299,61 +259,46 @@ export const projects = [
 export const certificates = {
   featured: [
     {
-      name: "Oracle Cloud Infrastructure 2025",
-      issuer: "Oracle",
+      name: "Ultimate AWS Bootcamp",
+      issuer: "School of DevOps",
       icon: "☁️",
     },
     {
-      name: "Programming in Java (94%)",
-      issuer: "NPTEL",
-      icon: "☕",
+      name: "Complete Flutter & Dart Development",
+      issuer: "Udemy",
+      icon: "📱",
     },
     {
-      name: "C Programming & Assembly Language",
-      issuer: "NPTEL",
-      icon: "⚙️",
-    },
-    {
-      name: "Technology Job Simulation",
-      issuer: "Deloitte",
-      icon: "💼",
-    },
-    {
-      name: "Career Edge – IT Primer",
-      issuer: "TCS iON",
+      name: "B.Tech Computer Science & Engineering",
+      issuer: "Amrita Vishwa Vidyapeetham",
       icon: "🎓",
     },
     {
-      name: "Fundamentals of BI & Analytics",
-      issuer: "Lumenore",
-      icon: "📊",
+      name: "Distributed Systems & Security Architecture",
+      issuer: "Amrita University",
+      icon: "🔒",
     },
   ],
-  viewAllUrl:
-    "https://drive.google.com/file/d/1ObdGWtVSx8SsfR4AcbCySSd9LFXcAs9f/view?usp=sharing",
+  viewAllUrl: "/Guru_Resume.pdf",
 };
 
 export const education = {
   degree: "B.Tech – Computer Science & Engineering",
-  institution: "IES College of Technology (RGPV)",
-  cgpa: "8.35",
-  graduation: "2027",
-  twelfth: "12th Science – 81%",
-  tenth: "10th CBSE – 70%",
+  institution: "Amrita Vishwa Vidyapeetham, Coimbatore",
+  graduation: "2023 – 2027",
+  coursework: "DSA, DBMS, Operating Systems, Distributed Systems, Cryptography, Full Stack Frameworks",
 };
 
 export const footerContent = {
   taglines: [
-    "Software Engineering & Web Dev",
-    "Java · Spring Boot · React",
-    "Full Stack Applications",
+    "Full-Stack & Distributed Systems",
+    "Real-Time Platforms · Zero-Knowledge Security",
+    "TypeScript · React · Node.js · C11",
   ],
-  credential: "B.Tech CSE · CGPA 8.35",
-  copyright: `© ${new Date().getFullYear()} Md Yusuf | Built with React`,
+  credential: "B.Tech Computer Science & Engineering",
+  copyright: `© ${new Date().getFullYear()} Guru D | Built with React & Vite`,
 };
 
-// EmailJS Configuration
-// Will read directly from environment variables in Vite (starting with VITE_)
 export const emailjsConfig = {
   serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID || "YOUR_EMAILJS_SERVICE_ID",
   templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "YOUR_EMAILJS_TEMPLATE_ID",
