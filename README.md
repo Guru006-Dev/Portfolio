@@ -58,7 +58,7 @@ npm run build
 ## 👤 Author
 
 **Guru D** — Full-Stack & Distributed Systems Engineer
-- 🌐 **Live Portfolio**: [portfolio-three-coral-dk8qgcetd8.vercel.app](https://portfolio-three-coral-dk8qgcetd8.vercel.app/)
+- 🌐 **Live Portfolio**: [guru-portfolio-welcome.vercel.app](https://guru-portfolio-welcome.vercel.app/)
 - **GitHub**: [@Guru006-Dev](https://github.com/Guru006-Dev)
 - **LinkedIn**: [gurud132](https://www.linkedin.com/in/gurud132)
 - **Instagram**: [@o_lone.wolf_o](https://www.instagram.com/o_lone.wolf_o/)
