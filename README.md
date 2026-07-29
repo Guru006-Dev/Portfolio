@@ -1,16 +1,69 @@
-# React + Vite
+# 🚀 Guru D — Animated AI Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, high-performance animated developer portfolio built with **React 19**, **Vite 8**, **Tailwind CSS v4**, **Framer Motion**, and **AOS**. Features interactive video hero integration, zero-knowledge security project showcases, physics-inspired lanyard badge animations, and responsive design.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- 📹 **Interactive Hero Video**: Built-in 1080p talking avatar video background with custom glassmorphism Play/Pause controls.
+- 🎴 **Physics-Inspired Lanyard Badge**: Dynamic swinging ID badge card powered by CSS keyframes and AOS animations.
+- 🔐 **Featured Project Showcases**:
+  - 🚀 **[Zoomcab](https://github.com/Guru006-Dev/Zoomcab)**: Real-time distributed ride-matching engine with Redis Geospatial, Socket.io, and Gemini AI.
+  - 🔐 **[Zero-Vault](https://github.com/SricharanAsr/Zero-Vault-Secure-Password-Manager)**: Zero-knowledge password manager with AES-256 pre-transmission encryption and native C11 risk engine ([Live Demo](https://secure-vault-testing-engineer.vercel.app)).
+  - 🧠 **HealNet**: AI-integrated social healthcare platform with Sentence-BERT & Siamese Neural Network.
+- 📜 **Direct Certificate Links**:
+  - ☁️ **Ultimate AWS Bootcamp** — School of DevOps
+  - 🏆 **K-Hacks Hackathon** — K-Hacks
+  - ⚡ **NitroStack Hackathon** — Amrita Vishwa Vidyapeetham
+- 📱 **100% Responsive Design**: Tailored layout for desktop, tablet, and mobile viewports.
+- ⚡ **Lightning Fast**: Built on Vite 8, achieving sub-300ms production bundling.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React 19, Vite 8, Tailwind CSS v4
+- **Animations**: Framer Motion, AOS (Animate on Scroll)
+- **Deployment**: Vercel
+- **Form Handling**: EmailJS & Mailto fallback
+
+---
+
+## 🚀 Quick Start
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/Guru006-Dev/Portfolio.git
+cd Portfolio
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Start development server
+```bash
+npm run dev
+```
+
+### 4. Build for production
+```bash
+npm run build
+```
+
+---
+
+## 👤 Author
+
+**Guru D** — Full-Stack & Distributed Systems Engineer
+- **GitHub**: [@Guru006-Dev](https://github.com/Guru006-Dev)
+- **LinkedIn**: [gurud132](https://www.linkedin.com/in/gurud132)
+- **Instagram**: [@o_lone.wolf_o](https://www.instagram.com/o_lone.wolf_o/)
+
+---
+
+## 📄 License
+
+This project is open source and available under the MIT License.
