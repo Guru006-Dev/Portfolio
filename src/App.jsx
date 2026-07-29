@@ -25,7 +25,6 @@ function App() {
       <Services />
       <Projects />
       <ContentCreator />
-      <Internships />
       <Leadership />
       <Certificates />
       <SoftSkills />

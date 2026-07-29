@@ -262,24 +262,22 @@ export const certificates = {
       name: "Ultimate AWS Bootcamp",
       issuer: "School of DevOps",
       icon: "☁️",
+      url: "/certificates/aws-bootcamp.jpg"
     },
     {
       name: "Complete Flutter & Dart Development",
-      issuer: "Udemy",
+      issuer: "Udemy / KHacks",
       icon: "📱",
+      url: "/certificates/khacks.pdf"
     },
     {
       name: "B.Tech Computer Science & Engineering",
       issuer: "Amrita Vishwa Vidyapeetham",
       icon: "🎓",
-    },
-    {
-      name: "Distributed Systems & Security Architecture",
-      issuer: "Amrita University",
-      icon: "🔒",
-    },
+      url: "/certificates/amrita-certificate.pdf"
+    }
   ],
-  viewAllUrl: "/Guru_Resume.pdf",
+  viewAllUrl: "/certificates/amrita-certificate.pdf",
 };
 
 export const education = {

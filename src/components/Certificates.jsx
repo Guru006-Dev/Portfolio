@@ -2,15 +2,18 @@ import React from 'react';
 import { certificates } from '../data/portfolioData';
 
 const CertificateCard = ({ cert, aosDelay }) => (
-  <div 
+  <a 
+    href={cert.url}
+    target="_blank"
+    rel="noopener noreferrer"
     data-aos="zoom-in"
     data-aos-delay={aosDelay}
-    className="bg-black/20 backdrop-blur-sm rounded-2xl p-5 border border-white/10 hover:border-white/25 hover:scale-105 hover:shadow-[0_15px_40px_rgba(0,0,0,0.3)] transition-all duration-500 cursor-default group"
+    className="bg-black/20 backdrop-blur-sm rounded-2xl p-5 border border-white/10 hover:border-white/40 hover:bg-black/40 hover:scale-105 hover:shadow-[0_15px_40px_rgba(0,0,0,0.4)] transition-all duration-300 cursor-pointer group flex justify-between items-center"
   >
     <div className="flex items-start gap-4">
       <span className="text-2xl mt-0.5 group-hover:scale-110 transition-transform duration-300">{cert.icon}</span>
       <div>
-        <h3 className="text-white font-bold text-sm md:text-base leading-tight mb-1 group-hover:text-white transition-colors">
+        <h3 className="text-white font-bold text-sm md:text-base leading-tight mb-1 group-hover:text-red-200 transition-colors">
           {cert.name}
         </h3>
         <p className="text-white/50 text-xs font-semibold uppercase tracking-wider">
@@ -18,7 +21,10 @@ const CertificateCard = ({ cert, aosDelay }) => (
         </p>
       </div>
     </div>
-  </div>
+    <svg className="w-4 h-4 text-white/40 group-hover:text-white group-hover:translate-x-1 transition-all shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+    </svg>
+  </a>
 );
 
 const Certificates = () => {
@@ -39,12 +45,12 @@ const Certificates = () => {
             Certifications
           </h2>
           <p className="text-red-100 text-base md:text-lg font-semibold max-w-lg mx-auto">
-            Industry-recognized certifications that validate my technical expertise.
+            Industry-recognized certifications that validate my technical expertise. Click any card to view the official document.
           </p>
         </div>
 
         {/* Certificate Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {certificates.featured.map((cert, index) => (
             <CertificateCard 
               key={cert.name} 
@@ -52,24 +58,6 @@ const Certificates = () => {
               aosDelay={String((index + 1) * 100)} 
             />
           ))}
-        </div>
-
-        {/* View All Certificates CTA */}
-        <div data-aos="fade-up" data-aos-delay="700" className="flex justify-center">
-          <a
-            href={certificates.viewAllUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 px-8 py-3.5 rounded-full bg-white text-black font-bold text-base hover:bg-gray-100 hover:scale-105 hover:shadow-[0_10px_30px_rgba(0,0,0,0.2)] transition-all duration-300 group"
-          >
-            <svg className="w-5 h-5 text-[#ff2a2a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-            View All Certificates
-            <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </a>
         </div>
       </div>
 
