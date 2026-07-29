@@ -221,7 +221,7 @@ export const projects = [
       "Bully Algorithm"
     ],
     links: {
-      github: "https://github.com/Guru006-Dev",
+      github: "https://github.com/Guru006-Dev/Zoomcab",
       demo: null,
     },
     isFlagship: true,
@@ -235,9 +235,8 @@ export const projects = [
       "A security-focused password management platform engineered with zero-knowledge architecture where master passwords never leave the client and pre-transmission AES-256 encryption protects user data. Powered by a native C11 risk engine with immutable hash-chain verification for tamper-evident audit logging and a 5-layer conflict resolution model (LWW merge, versioned sync, encrypted tombstones) ensuring eventual consistency across devices.",
     techTags: ["React 19", "TypeScript", "Node.js", "Supabase", "Native C11", "AES-256", "Playwright", "k6"],
     links: {
-      github: "https://github.com/Guru006-Dev",
-      frontendDemo: null,
-      backendApi: null,
+      github: "https://github.com/SricharanAsr/Zero-Vault-Secure-Password-Manager",
+      demo: "https://secure-vault-testing-engineer.vercel.app",
     },
     isFlagship: false,
   },
