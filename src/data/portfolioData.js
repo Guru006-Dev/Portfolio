@@ -265,15 +265,15 @@ export const certificates = {
       url: "/certificates/aws-bootcamp.jpg"
     },
     {
-      name: "Complete Flutter & Dart Development",
-      issuer: "Udemy / KHacks",
-      icon: "📱",
+      name: "K-Hacks Hackathon",
+      issuer: "K-Hacks",
+      icon: "🏆",
       url: "/certificates/khacks.pdf"
     },
     {
-      name: "B.Tech Computer Science & Engineering",
+      name: "NitroStack Hackathon",
       issuer: "Amrita Vishwa Vidyapeetham",
-      icon: "🎓",
+      icon: "⚡",
       url: "/certificates/amrita-certificate.pdf"
     }
   ],
