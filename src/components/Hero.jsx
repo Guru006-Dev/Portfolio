@@ -200,13 +200,13 @@ const Hero = () => {
         data-aos-delay="800"
         className="hidden md:block absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 pointer-events-none"
       >
-        <div className="animate-bounce">
+        <div className="w-10 h-10 rounded-full border border-white/30 bg-black/40 backdrop-blur-md flex items-center justify-center text-white shadow-[0_0_15px_rgba(255,255,255,0.2)] animate-bounce">
           <svg 
-            className="w-6 h-6 text-black drop-shadow-[0_1px_2px_rgba(255,255,255,0.6)]" 
+            className="w-5 h-5 text-white" 
             fill="none" 
             strokeLinecap="round" 
             strokeLinejoin="round" 
-            strokeWidth="3" 
+            strokeWidth="2.5" 
             viewBox="0 0 24 24" 
             stroke="currentColor"
           >
