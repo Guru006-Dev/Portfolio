@@ -113,10 +113,10 @@ const Hero = () => {
             <span 
               className="font-extrabold"
               style={{
-                color: 'transparent',
-                WebkitTextFillColor: 'transparent',
-                WebkitTextStroke: '1.5px #ffffff',
-                filter: 'drop-shadow(0 4px 12px rgba(0, 0, 0, 0.9))'
+                color: 'rgba(255, 255, 255, 0.92)',
+                WebkitTextFillColor: 'rgba(255, 255, 255, 0.92)',
+                WebkitTextStroke: '1px #ffffff',
+                textShadow: '0 4px 20px rgba(0, 0, 0, 0.95), 0 2px 6px rgba(0, 0, 0, 0.9)'
               }}
             >
               {heroContent.titleHighlight}
