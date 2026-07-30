@@ -1,5 +1,6 @@
 import React from 'react';
 import { contentCreation } from '../data/portfolioData';
+import TiltCard from './TiltCard';
 
 const categoryIcons = [
   // Distributed Systems Icon (Lightning / Distributed Node)
@@ -21,7 +22,7 @@ const categoryIcons = [
 ];
 
 const CreatorCard = ({ category, index }) => (
-  <div 
+  <TiltCard 
     data-aos="fade-up"
     data-aos-delay={index * 100}
     className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:scale-[1.02] hover:border-red-500/30 hover:shadow-[0_20px_50px_rgba(255,42,42,0.15)] transition-all duration-500 group flex flex-col justify-between"
@@ -42,7 +43,7 @@ const CreatorCard = ({ category, index }) => (
         {category.description}
       </p>
     </div>
-  </div>
+  </TiltCard>
 );
 
 const ContentCreator = () => {

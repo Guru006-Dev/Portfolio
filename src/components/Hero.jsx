@@ -107,18 +107,10 @@ const Hero = () => {
           {/* Main Heading */}
           <h1 
             data-aos="fade-up"
-            className="text-white text-3xl md:text-5xl font-extrabold mb-4 tracking-tight leading-tight"
+            className="text-white text-3xl md:text-5xl lg:text-6xl font-black mb-4 tracking-tight leading-tight"
           >
-            {heroContent.greeting}, <br /> 
-            <span 
-              className="font-extrabold"
-              style={{
-                color: 'rgba(255, 255, 255, 0.92)',
-                WebkitTextFillColor: 'rgba(255, 255, 255, 0.92)',
-                WebkitTextStroke: '1px #ffffff',
-                textShadow: '0 4px 20px rgba(0, 0, 0, 0.95), 0 2px 6px rgba(0, 0, 0, 0.9)'
-              }}
-            >
+            <span className="text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">{heroContent.greeting},</span> <br /> 
+            <span className="bg-gradient-to-r from-white via-red-400 to-[#ff2a2a] bg-clip-text text-transparent font-black drop-shadow-[0_6px_25px_rgba(0,0,0,0.95)]">
               {heroContent.titleHighlight}
             </span>
           </h1>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { softSkillsList } from '../data/portfolioData';
+import TiltCard from './TiltCard';
 
 const softSkillIcons = [
   // System Design (Modular Server Architecture / Blueprint)
@@ -25,7 +26,7 @@ const softSkillIcons = [
 ];
 
 const SoftSkillCard = ({ skill, index }) => (
-  <div 
+  <TiltCard 
     data-aos="fade-up"
     data-aos-delay={index * 100}
     className="w-full bg-[#f8f8f8] border border-gray-200 rounded-3xl p-6 hover:scale-[1.03] hover:bg-white hover:border-[#ff2a2a]/30 hover:shadow-[0_20px_45px_rgba(255,42,42,0.08)] transition-all duration-500 group flex flex-col items-center text-center justify-between min-h-[220px]"
@@ -41,7 +42,7 @@ const SoftSkillCard = ({ skill, index }) => (
         {skill.desc}
       </p>
     </div>
-  </div>
+  </TiltCard>
 );
 
 const SoftSkills = () => {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { projects, socialLinks } from '../data/portfolioData';
+import TiltCard from './TiltCard';
 
 const GitHubIcon = () => (
   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -14,7 +15,7 @@ const ExternalLinkIcon = () => (
 );
 
 const ProjectCard = ({ project, aosDelay }) => (
-  <div 
+  <TiltCard 
     data-aos="fade-up"
     data-aos-delay={aosDelay}
     className={`relative rounded-2xl p-[1px] group transition-all duration-500 ${
@@ -117,7 +118,7 @@ const ProjectCard = ({ project, aosDelay }) => (
         )}
       </div>
     </div>
-  </div>
+  </TiltCard>
 );
 
 const Projects = () => {

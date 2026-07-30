@@ -1,13 +1,13 @@
 import React from 'react'
 import Preloader from './components/Preloader'
 import Navbar from './components/Navbar'
+import SidebarTracker from './components/SidebarTracker'
 import Hero from './components/Hero'
 import About from './components/About'
 import TechnicalSkills from './components/TechnicalSkills'
 import Services from './components/Services'
 import Projects from './components/Projects'
 import ContentCreator from './components/ContentCreator'
-import Internships from './components/Internships'
 import Leadership from './components/Leadership'
 import Certificates from './components/Certificates'
 import SoftSkills from './components/SoftSkills'
@@ -19,6 +19,7 @@ function App() {
     <>
       <Preloader />
       <Navbar />
+      <SidebarTracker />
       <Hero />
       <About />
       <TechnicalSkills />
